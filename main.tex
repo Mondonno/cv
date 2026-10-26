@@ -1,0 +1,69 @@
+% Compile with pdfLaTeX. Source notes: RESEARCH.md.
+\documentclass[10pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[margin=17mm]{geometry}
+\usepackage{lmodern,microtype,xcolor,enumitem,titlesec}
+\usepackage[hidelinks,unicode]{hyperref}
+\input{glyphtounicode}
+\pdfgentounicode=1
+\renewcommand{\familydefault}{\sfdefault}
+\definecolor{muted}{HTML}{555555}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlist[itemize]{leftmargin=1.2em,itemsep=1.5pt,topsep=3pt,parsep=0pt}
+\titleformat{\section}{\large\bfseries}{}{0pt}{}[\vspace{2pt}\titlerule]
+\titlespacing*{\section}{0pt}{10pt}{6pt}
+\newcommand{\entry}[4]{\textbf{#1}\hfill{\small #2}\\{\small #3\hfill\textcolor{muted}{#4}}\par}
+\newcommand{\project}[3]{\textbf{\href{#2}{#1}}\hfill{\small\textcolor{muted}{#3}}\par}
+\begin{document}
+{\fontsize{26}{29}\selectfont\bfseries Mikołaj Mocek}\\[4pt]
+{\large Software Engineer}\hfill{\small Gliwice, Poland}\\[6pt]
+{\small\href{mailto:m@mikolajmocek.com}{m@mikolajmocek.com}\enspace\textbar\enspace
+\href{https://mikolajmocek.com}{mikolajmocek.com}\\[3pt]
+\href{https://github.com/Mondonno}{github.com/Mondonno}\enspace\textbar\enspace
+\href{https://www.linkedin.com/in/mikolajmocek/}{linkedin.com/in/mikolajmocek}}
+\section{Profile}
+Software engineer and startup co-founder working across backend systems, mobile applications and machine learning. Built booking and payment software, developed open-source libraries, and contributed to computer-vision research for wheelchair accessibility. Focused on Go, Python, C++ and Flutter.
+\section{Technical Skills}
+\textbf{Languages:} \href{https://go.dev/}{Go}, \href{https://www.python.org/}{Python}, \href{https://en.cppreference.com/w/c.html}{C}, \href{https://isocpp.org/}{C++}, \href{https://learn.microsoft.com/dotnet/csharp/}{C\#}, \href{https://dart.dev/}{Dart}, \href{https://developer.mozilla.org/en-US/docs/Web/JavaScript}{JavaScript}, \href{https://www.typescriptlang.org/}{TypeScript}, \href{https://www.gnu.org/software/bash/}{Bash}, \href{https://developer.mozilla.org/en-US/docs/Web/HTML}{HTML}, \href{https://developer.mozilla.org/en-US/docs/Web/CSS}{CSS}, \href{https://sass-lang.com/}{SCSS}\\[3pt]
+\textbf{Backend \& infrastructure:} \href{https://developer.mozilla.org/en-US/docs/Glossary/REST}{REST APIs}, \href{https://dotnet.microsoft.com/}{.NET}, \href{https://www.docker.com/}{Docker}, \href{https://www.pulumi.com/}{Pulumi}, \href{https://www.mongodb.com/}{MongoDB}, \href{https://www.mysql.com/}{MySQL}, \href{https://www.sqlite.org/}{SQLite}, \href{https://postgis.net/}{PostGIS}\\[3pt]
+\textbf{Applications \& ML:} \href{https://flutter.dev/}{Flutter}, \href{https://react.dev/}{React}, \href{https://reactnative.dev/}{React Native}, \href{https://www.electronjs.org/}{Electron}, \href{https://dotnet.microsoft.com/apps/xamarin}{Xamarin}, \href{https://nextjs.org/}{Next.js}, \href{https://pytorch.org/}{PyTorch}, \href{https://github.com/Mondonno/nns}{neural networks}
+\section{Experience}
+\entry{Co-Founder, CEO \& CTO}{Jul 2024 -- Present}{\href{https://iminti.com}{iminti}}{Poland}
+\begin{itemize}
+\item Lead engineering for \href{https://iminti.com/pl/go}{iminti Go!}, a navigation product that helps wheelchair users avoid urban accessibility barriers.
+\item Develop accessibility mapping and routing with Go, Python, MongoDB and PostGIS, combining spatial data with computer vision.
+\end{itemize}
+\vspace{3pt}
+\entry{Lead Software Engineer \textnormal{(freelance)}}{Sep 2023 -- Oct 2025}{\href{https://silkazmatmy.pl/}{siłka Z matmy}}{Poland}
+\begin{itemize}
+\item Built a lesson-booking system with electronic payments and calendar-based scheduling.
+\item Developed network infrastructure and a mail server; automated workflows and trained staff in IT tools.
+\end{itemize}
+\vspace{3pt}
+\entry{Lead Software Engineer \textnormal{(freelance)}}{Sep 2019 -- Oct 2025}{\href{https://www.linkedin.com/company/1472703/}{TRANSLATOR.RYBNIK}}{Poland}
+\begin{itemize}
+\item Worked across software development and IT infrastructure; also held a Data Specialist role from Sep 2023 to Oct 2025.
+\end{itemize}
+\vspace{3pt}
+\entry{Project Team Member --- Computer Vision}{Jun 2024 -- Oct 2024}{\href{https://www.linkedin.com/school/15098218/}{Silesian University of Technology} \textbar\ \href{https://www.polsl.pl/ps_aktualnosci/iii-edycja-projektu-politechnika/}{Project Based Learning}}{Poland}
+\begin{itemize}
+\item Researched \href{https://repolis.bg.polsl.pl/dlibra/publication/90136/edition/80108?language=pl}{wheelchair-accessibility information extraction from panoramic images}; the team's neural network achieved 75\% accuracy on its test dataset.
+\end{itemize}
+\section{Selected Open-Source Projects}
+\project{nns --- Neural Networks from Scratch}{https://github.com/Mondonno/nns}{Python}
+Implemented a modular neural-network framework with backpropagation, dense and convolutional layers, optimizers and numerical gradient checking.\\[6pt]
+\project{Airly.Net}{https://github.com/Mondonno/Airly.Net}{C\# / .NET}
+Built an asynchronous client for the \href{https://developer.airly.org/docs}{Airly REST API}, distributed through \href{https://www.nuget.org/packages/AirlyNet/}{NuGet} with \href{https://mondonno.github.io/airly.net}{API documentation} and usage examples.\\[6pt]
+\project{CustomPopUps.iOS}{https://github.com/Mondonno/CustomPopUps.iOS}{C\# / Xamarin.iOS}
+Created a lightweight library for presenting custom modal interfaces in Xamarin.iOS applications.
+\section{Education \& Research}
+\entry{\href{https://alorybnik.polsl.pl/}{Academic Secondary School, Rybnik}}{Sep 2022 -- Present}{Affiliated with \href{https://www.linkedin.com/school/15098218/}{Silesian University of Technology}}{Mathematics, Physics, Chemistry}
+\vspace{4pt}
+\href{https://www.linkedin.com/in/mikolajmocek/details/experience/}{ML and neural-network mentorship} at \href{https://www.linkedin.com/school/15098218/}{Silesian University of Technology} with Dr Roman Kluger (Sep 2023 -- Present).
+\section{Recognition}
+\textbf{\href{https://www.linkedin.com/feed/update/urn:li:activity:7467847680115761152/}{iminti team:}} Golden Wolf --- best social project in Poland in the Urban Space category; Silver Wolf --- regional distinction, Zwolnieni z Teorii.
+\end{document}
